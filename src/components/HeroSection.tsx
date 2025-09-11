@@ -1,8 +1,11 @@
-import { Button } from "@/components/ui/button";
-import { Play, Star, Users, Award, TrendingUp } from "lucide-react";
-import heroFamily from "@/assets/hero-family.jpg";
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
+import { Play, Star, Users, Award, TrendingUp } from 'lucide-react';
+import heroFamily from '@/assets/hero-family.jpg';
 
 const HeroSection = () => {
+  const navigate = useNavigate();
   return (
     <section className="relative bg-gradient-to-br from-background via-muted/30 to-accent/10 py-16 md:py-24">
       <div className="container mx-auto px-4">
@@ -47,7 +50,7 @@ const HeroSection = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="hero" size="lg" className="text-lg px-8 py-6">
+              <Button variant="hero" size="lg" className="text-lg px-8 py-6" onClick={() => navigate('/trial-signup')}>
                 Start 7-Day Free Trial
                 <span className="text-sm opacity-90">(No card needed)</span>
               </Button>

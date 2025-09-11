@@ -13,6 +13,7 @@ import {
   Trophy,
   Target
 } from "lucide-react";
+import InteractiveLesson from "./InteractiveLesson";
 
 const lessonCategories = [
   {
@@ -68,14 +69,6 @@ const lessonCategories = [
     duration: "4 lessons • 3.5 hours"
   }
 ];
-
-const sampleLesson = {
-  title: "What is UPI? Digital Payments Made Easy",
-  description: "Learn how UPI revolutionized Indian payments, from QR codes to instant transfers",
-  duration: "25 mins",
-  activities: 6,
-  reward: "₹500"
-};
 
 const LessonsSection = () => {
   return (
@@ -141,96 +134,18 @@ const LessonsSection = () => {
           })}
         </div>
 
-        {/* Sample Lesson Preview */}
-        <div className="max-w-4xl mx-auto">
+        {/* Interactive Sample Lesson */}
+        <div className="max-w-6xl mx-auto">
           <div className="text-center mb-8">
             <h3 className="text-2xl font-bold text-foreground mb-2">
-              Sample Lesson Preview
+              Try Our Interactive Lesson
             </h3>
             <p className="text-muted-foreground">
-              See how our interactive lessons work with real Indian examples
+              Experience how our lessons work with this fully interactive UPI lesson
             </p>
           </div>
 
-          <Card className="bg-gradient-card border-2 border-primary/20 shadow-card">
-            <CardContent className="p-8">
-              <div className="grid md:grid-cols-2 gap-8 items-center">
-                {/* Lesson Info */}
-                <div className="space-y-6">
-                  <div className="space-y-3">
-                    <div className="flex items-center gap-2">
-                      <Badge variant="secondary">Lesson 5</Badge>
-                      <Badge variant="outline">Digital Payments</Badge>
-                    </div>
-                    
-                    <h4 className="text-2xl font-bold text-foreground">
-                      {sampleLesson.title}
-                    </h4>
-                    
-                    <p className="text-muted-foreground">
-                      {sampleLesson.description}
-                    </p>
-                  </div>
-
-                  <div className="grid grid-cols-3 gap-4">
-                    <div className="text-center p-3 bg-muted/50 rounded-lg">
-                      <Clock className="w-5 h-5 text-primary mx-auto mb-1" />
-                      <div className="text-sm font-medium">{sampleLesson.duration}</div>
-                      <div className="text-xs text-muted-foreground">Duration</div>
-                    </div>
-                    
-                    <div className="text-center p-3 bg-muted/50 rounded-lg">
-                      <Target className="w-5 h-5 text-accent mx-auto mb-1" />
-                      <div className="text-sm font-medium">{sampleLesson.activities}</div>
-                      <div className="text-xs text-muted-foreground">Activities</div>
-                    </div>
-                    
-                    <div className="text-center p-3 bg-muted/50 rounded-lg">
-                      <Trophy className="w-5 h-5 text-success mx-auto mb-1" />
-                      <div className="text-sm font-medium">{sampleLesson.reward}</div>
-                      <div className="text-xs text-muted-foreground">Reward</div>
-                    </div>
-                  </div>
-
-                  <Button variant="hero" className="w-full md:w-auto">
-                    <Star className="w-4 h-4" />
-                    Try This Lesson Free
-                  </Button>
-                </div>
-
-                {/* Lesson Preview */}
-                <div className="relative">
-                  <div className="bg-background rounded-2xl border-2 border-border p-6 shadow-card">
-                    <div className="space-y-4">
-                      <div className="flex items-center justify-between">
-                        <h5 className="font-semibold">Interactive Question</h5>
-                        <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded">2/6</span>
-                      </div>
-                      
-                      <div className="text-sm text-foreground">
-                        Ravi wants to send ₹500 to his friend using UPI. Which app can he use?
-                      </div>
-                      
-                      <div className="space-y-2">
-                        <button className="w-full p-3 text-left bg-muted/50 rounded-lg hover:bg-primary/10 transition-colors text-sm">
-                          📱 Google Pay (GPay)
-                        </button>
-                        <button className="w-full p-3 text-left bg-primary/10 border border-primary/20 rounded-lg text-sm">
-                          🔄 PhonePe
-                        </button>
-                        <button className="w-full p-3 text-left bg-muted/50 rounded-lg hover:bg-primary/10 transition-colors text-sm">
-                          💰 Paytm
-                        </button>
-                        <button className="w-full p-3 text-left bg-muted/50 rounded-lg hover:bg-primary/10 transition-colors text-sm">
-                          ✅ All of the above
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+          <InteractiveLesson />
         </div>
       </div>
     </section>
